@@ -62,6 +62,7 @@ api();
 
 function api(city = 'qena'){
     var request = new XMLHttpRequest();
+ 
     request.open("GET", `https://api.aladhan.com/v1/calendarByCity/2023/9?country=egy&city=${city}&year=2023&month=09`);
 
 
@@ -75,7 +76,6 @@ request.onreadystatechange = function() {
     if(this.readyState === 4 && this.status === 200) {
             
         let data = JSON.parse(this.responseText);
-            console.log(data);
        /* if(data.data[dayNumber - 1].timings.Asr.split(" ")[0].split(":")[0] > 12)
         {
             alert("Yes")
