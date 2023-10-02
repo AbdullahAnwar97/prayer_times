@@ -62,8 +62,7 @@ api();
 
 function api(city = 'qena'){
     var request = new XMLHttpRequest();
- 
-    request.open("GET", `https://api.aladhan.com/v1/calendarByCity/2023/9?country=egy&city=${city}&year=2023&month=09`);
+    request.open("GET", `https://api.aladhan.com/v1/calendarByCity/2023/9?country=egy&city=${city}&year=2023&month=10`);
 
 
 function createElement(el,text,parent){
@@ -80,7 +79,6 @@ request.onreadystatechange = function() {
         {
             alert("Yes")
         }*/
-
         document.querySelector(".title-Fajr").innerHTML = "الفجْر";
         document.querySelector(".text-Fajr").innerHTML = data.data[dayNumber - 1].timings.Fajr.split(" ")[0];
 
